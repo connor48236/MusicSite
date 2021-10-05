@@ -1,0 +1,43 @@
+
+:host{
+    display: block;
+    border: 5px solid #000;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    margin: 10px auto;
+    background-color: gainsboro;
+}
+
+div{
+  margin: 10px;
+}
+
+.author{
+  font-size: xx-large;
+}
+
+.title{
+  font-size: x-large;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  border: solid 2px darkred;
+}
+img:hover{
+  transform: scale(1.1);
+}
+
+:host.isMeatlcore{
+  border: solid 2px blue;
+}
+
+:host.isR&B{
+  border: solid 2px red;
+}
+
+:host.isRap{
+  border: solid 2px purple;
+}

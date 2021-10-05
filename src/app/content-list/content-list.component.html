@@ -1,0 +1,14 @@
+
+<div class="songFinder">
+  <h4>Find a Song</h4>
+  find a song <input #songTitle>
+  <button (click)="triggerAlertSong(songTitle.toString())")>
+    Click to see it there is a song with that title
+  </button>
+  </div>
+<div>
+  {{triggerAlertSong}}
+</div>
+
+<app-content-card *ngFor="let item of contentList; last as isLast" [content]="item" [class.is-last] = "isLast"></app-content-card>
+<app-content-card *ngFor="let type of (contentList | contentType: 'Metalcore'); type as isMetalcore" [content]="type" [class.Meatlcore]="isMetalcore"></app-content-card>

@@ -1,0 +1,17 @@
+<div class="author">
+  {{ content.author }}
+</div>
+<div class="title">
+  {{ content.title }}
+</div>
+<img (click)="clickEvent()" src="{{content.imgUrl}}">
+<div class="body">
+  {{ content.body }}
+</div>
+<div *ngIf="content.type" class="type">
+  {{ content.type }}
+</div>
+<div class="tag">
+  {{ content.tags }}
+</div>
+
