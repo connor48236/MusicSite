@@ -10,8 +10,7 @@ import {Content} from "../helper-files/content-interface";
 
 export class ContentListComponent implements OnInit {
   public contentList: Content[];
-  public content: Content;
-  public song: any
+  public songMessage: string;
   constructor() {
     this.contentList = [{
       id: 1,
@@ -61,13 +60,19 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  triggerAlertSong(songTitle: string): string {
-    setTimeout(() => console.log("Update song"), 0);
-    if (this.song == this.content.title){
-      return "The song ${this.song} exits"
-    }else {
-      return "The song ${this.song} does not exits"
+  triggerAlertSong(songName: string){
+    for(let i = 0; i < this.contentList.length; i++){
+        if (this.contentList[i].title == songName){
+          this.songMessage = "this song does exist";
+          break;
+        }else{
+          this.songMessage = "this song does not exist";
+        }
+        console.log(songName)
+        console.log(this.contentList[i].title)
+
     }
+
   }
 
 }
