@@ -3,7 +3,7 @@
   <h4>Find a Song</h4>
   find a song <input #songTitle>
   <button (click)="triggerAlertSong(songTitle.value)">
-    Click to see it there is a song with that title
+    Find
   </button>
   </div>
 <div>
@@ -14,3 +14,5 @@
 <app-content-card *ngFor="let type of (contentList | contentType: 'Metalcore');"  [content]="type"  class="isMetalcore"></app-content-card>
 <app-content-card *ngFor="let type of (contentList | contentType: 'R&B');"  [content]="type"  class="isRnB"></app-content-card>
 <app-content-card *ngFor="let type of (contentList | contentType: 'Rap');"  [content]="type"  class="isRap"></app-content-card>
+<app-content-card *ngFor="let type of (contentList | contentType: 'Prog Metal');"  [content]="type"  class="isProg"></app-content-card>
+<app-content-card *ngFor="let type of (contentList | contentType: 'Classic Rock');"  [content]="type"  class="isClassicRock"></app-content-card>

@@ -52,6 +52,13 @@ export class ContentListComponent implements OnInit {
       body: 'A dope rap song',
       type: 'Rap',
       tags: ['Rap', 'trap beat']
+    },{
+      id: 6,
+      author: 'Tool',
+      title: 'Sober',
+      body: 'One of the first tool songs to blow up',
+      type: 'Prog Metal',
+      tags: ['Prog Metal', 'guitar', 'Heavy']
     }]
 
   }

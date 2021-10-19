@@ -7,10 +7,11 @@
     text-align: center;
     margin: 10px auto;
     background-color: gainsboro;
+    font-size: large;
 }
 
-div{
-  margin: 10px;
+h4{
+  text-align: center;
 }
 
 .author{
@@ -40,4 +41,12 @@ img:hover{
 
 :host.isRap{
   border: solid 2px purple;
+}
+
+:host.isProg{
+  border: solid 2px darkgreen;
+}
+
+:host.isClassicRock{
+  border: solid 2px lightskyblue;
 }
