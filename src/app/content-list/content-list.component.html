@@ -1,3 +1,13 @@
+<div class="createContent">
+  <h4>Enter a new song</h4>
+  Author: <br><input #userAuthor> <br>
+  Title: <br><input #userTitle> <br>
+  Image:<br> <input #userImage> <br>
+  Description: <br><input #userDescription> <br>
+  Genres: <br><input #userType>
+  <button (click)="addToSong(userAuthor.value, userTitle.value, userDescription.value,
+  userType.value, userImage.value)">Add Song</button>
+</div>
 
 <div class="songFinder">
   <h4>Find a Song</h4>

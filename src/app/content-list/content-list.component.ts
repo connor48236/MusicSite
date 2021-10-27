@@ -11,6 +11,7 @@ import {Content} from "../helper-files/content-interface";
 export class ContentListComponent implements OnInit {
   public contentList: Content[];
   public songMessage: string;
+  public i = 7;
   constructor() {
     this.contentList = [{
       id: 1,
@@ -78,6 +79,31 @@ export class ContentListComponent implements OnInit {
         console.log(songName)
         console.log(this.contentList[i].title)
 
+    }
+
+  }
+
+  addToSong(author: string, title: string, desc: string, type: string, image: string) {
+
+
+
+    if(image.length != 0){
+      this.contentList.push({
+        id: this.i,
+        author: author,
+        title: title,
+        imgUrl: image,
+        body: desc,
+        type: type
+        }); this.i++
+    } else {
+      this.contentList.push({
+        id: this.i,
+        author: author,
+        title: title,
+        body: desc,
+        type: type
+      }); this.i++;
     }
 
   }

@@ -8,3 +8,11 @@ div{
   margin-bottom: 20px;
   font-size: large;
 }
+
+input{
+  margin: 10px;
+}
+
+div:first-child{
+  text-align: left;
+}
