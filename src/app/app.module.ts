@@ -8,6 +8,10 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentTypePipe } from "./type-pipe";
 import {HoverStyleDirective} from "./hover-style.directive";
 import {HoverCardDirective} from "./hover-card.directive";
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import {HoverCardDirective} from "./hover-card.directive";
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
