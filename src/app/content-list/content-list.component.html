@@ -1,18 +1,18 @@
 <div class="createContent">
   <h4>Enter a new song</h4>
-  Author: <br><input #userAuthor> <br>
-  Title: <br><input #userTitle> <br>
-  Image:<br> <input #userImage> <br>
-  Description: <br><input #userDescription> <br>
-  Genres: <br><input #userType>
-  <button (click)="addToSong(userAuthor.value, userTitle.value, userDescription.value,
+  Author: <br><input matinput color="accent" #userAuthor> <br>
+  Title: <br><input matinput color="accent" #userTitle> <br>
+  Image:<br> <input matinput color="accent" #userImage> <br>
+  Description: <br><input matinput color="accent" #userDescription> <br>
+  Genres: <br><input matinput color="accent" #userType>
+  <button mat-raised-button color="primary" (click)="addToSong(userAuthor.value, userTitle.value, userDescription.value,
   userType.value, userImage.value)">Add Song</button>
 </div>
 
 <div class="songFinder">
   <h4>Find a Song</h4>
   find a song <input #songTitle>
-  <button (click)="triggerAlertSong(songTitle.value)">
+  <button mat-raised-button color="primary" (click)="triggerAlertSong(songTitle.value)">
     Find
   </button>
   </div>

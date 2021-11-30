@@ -11,6 +11,9 @@ import {HoverCardDirective} from "./hover-card.directive";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -20,7 +23,9 @@ import {MatInputModule} from '@angular/material/input';
     ContentListComponent,
     ContentTypePipe,
     HoverStyleDirective,
-    HoverCardDirective
+    HoverCardDirective,
+    ContentDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +35,11 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  RouterModule.forRoot([
+    { path: 'content/:id', component: ContentDetailComponent },
+    { path: 'content', component: ContentListComponent },
+    { path: '**', component: NotFoundComponent }
+  ])
 })
 export class AppModule { }
